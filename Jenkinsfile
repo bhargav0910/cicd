@@ -13,7 +13,7 @@ node {
          * docker build on the command line */
 
         // app = docker.build("getintodevops/hellonode")
-	test = "all tests passed"
+//	test = "all tests passed"
     }
 
 
@@ -30,6 +30,6 @@ node {
            //    app.push("latest")
 
 	   echo "${env.BUILD_NUMBER}"
-	   echo $test	
+//	   echo $test	
     }
 }
