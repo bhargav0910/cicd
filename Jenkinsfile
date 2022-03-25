@@ -1,18 +1,24 @@
-node {
-
-    stage('Clone repository') {
-        /* Let's make sure we have the repository cloned to our workspace */
-
-        checkout scm
+pipeline{
+  agent any
+  stages{
+    stage ('Build'){
+      steps{
+        echo 'Building....'
+      }
     }
-
-    stage('Build image') {
-        /* This builds the actual image; synonymous to
+    stage ('Deploy'){
+      steps{
+        echo 'Deploying....'
+      }
     }
-
-
-    // code placeholder
-    stage('Print message') {
-	   echo "${env.BUILD_NUMBER}"
+    stage ('test'){
+      steps{
+        echo 'Testing....'
+      }
+    } 
+    stage ('Release'){ 
+      steps{
+        echo 'Releasing....'
     }
+  }
 }
